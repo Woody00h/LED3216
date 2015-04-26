@@ -298,6 +298,7 @@ void start_md_hour_mode()
 }
 void handle_md_hour_mode()
 {
+    char temp;
     if(!general_purpose_timer)
     {
         general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
@@ -308,7 +309,7 @@ void handle_md_hour_mode()
         }
         else
         {
-            char temp = bin2bcd(Hour);
+            temp = bin2bcd(Hour);
             buf[0] = digit[temp>>4];
             buf[1] = digit[temp&0xf];
         }
@@ -321,6 +322,11 @@ void handle_md_hour_mode()
         {
             Hour = 0;
         }
+        
+        temp = bin2bcd(Hour);
+        buf[0] = digit[temp>>4];
+        buf[1] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS4 && s4_toggle)
@@ -334,6 +340,10 @@ void handle_md_hour_mode()
         {
             Hour= 23;
         }
+        temp = bin2bcd(Hour);
+        buf[0] = digit[temp>>4];
+        buf[1] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS1 && s1_toggle)
@@ -356,6 +366,7 @@ void start_md_min_mode()
 }
 void handle_md_min_mode()
 {
+    char temp;
     if(!general_purpose_timer)
     {
         general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
@@ -366,7 +377,7 @@ void handle_md_min_mode()
         }
         else
         {
-            char temp = bin2bcd(Min);
+            temp = bin2bcd(Min);
             buf[2] = digit[temp>>4];
             buf[3] = digit[temp&0xf];
         }
@@ -379,6 +390,10 @@ void handle_md_min_mode()
         {
             Min = 0;
         }
+        temp = bin2bcd(Min);
+        buf[2] = digit[temp>>4];
+        buf[3] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS4 && s4_toggle)
@@ -392,6 +407,10 @@ void handle_md_min_mode()
         {
             Min= 59;
         }
+        temp = bin2bcd(Min);
+        buf[2] = digit[temp>>4];
+        buf[3] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS1 && s1_toggle)
@@ -417,6 +436,7 @@ void start_md_year_mode()
 }
 void handle_md_year_mode()
 {
+    char temp;
     if(!general_purpose_timer)
     {
         general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
@@ -429,7 +449,7 @@ void handle_md_year_mode()
         }
         else
         {
-            char temp = bin2bcd(Year)%100;
+            temp = bin2bcd(Year)%100;
             buf[0] = digit[2];
             buf[1] = digit[0];            
             buf[2] = digit[temp>>4];
@@ -444,6 +464,12 @@ void handle_md_year_mode()
         {
             Year = 0;
         }
+        temp = bin2bcd(Year)%100;
+        buf[0] = digit[2];
+        buf[1] = digit[0];            
+        buf[2] = digit[temp>>4];
+        buf[3] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS4 && s4_toggle)
@@ -457,6 +483,12 @@ void handle_md_year_mode()
         {
             Year= 99;
         }
+        temp = bin2bcd(Year)%100;
+        buf[0] = digit[2];
+        buf[1] = digit[0];            
+        buf[2] = digit[temp>>4];
+        buf[3] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS1 && s1_toggle)
@@ -485,6 +517,7 @@ void start_md_month_mode()
 }
 void handle_md_month_mode()
 {
+     char temp;
     if(!general_purpose_timer)
     {
         general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
@@ -495,7 +528,7 @@ void handle_md_month_mode()
         }
         else
         {
-            char temp = bin2bcd(Month);          
+            temp = bin2bcd(Month);          
             buf[0] = digit[temp>>4];
             buf[1] = digit[temp&0xf];
         }
@@ -508,6 +541,10 @@ void handle_md_month_mode()
         {
             Month = 1;
         }
+        temp = bin2bcd(Month);          
+        buf[0] = digit[temp>>4];
+        buf[1] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS4 && s4_toggle)
@@ -521,6 +558,10 @@ void handle_md_month_mode()
         {
             Month= 12;
         }
+        temp = bin2bcd(Month);          
+        buf[0] = digit[temp>>4];
+        buf[1] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS1 && s1_toggle)
@@ -548,6 +589,7 @@ void start_md_day_mode()
 }
 void handle_md_day_mode()
 {
+    char temp;
     if(!general_purpose_timer)
     {
         general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
@@ -558,7 +600,7 @@ void handle_md_day_mode()
         }
         else
         {
-            char temp = bin2bcd(Day);          
+            temp = bin2bcd(Day);          
             buf[2] = digit[temp>>4];
             buf[3] = digit[temp&0xf];
         }
@@ -571,6 +613,10 @@ void handle_md_day_mode()
         {
             Day = 1;
         }
+        temp = bin2bcd(Day);          
+        buf[2] = digit[temp>>4];
+        buf[3] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS4 && s4_toggle)
@@ -584,6 +630,10 @@ void handle_md_day_mode()
         {
             Day = day_per_month[is_leap_year(Year)][Month-1];
         }
+        temp = bin2bcd(Day);          
+        buf[2] = digit[temp>>4];
+        buf[3] = digit[temp&0xf];
+        general_purpose_timer = HALF_SECOND_TIMER_RELOAD;
     }
     
     if(KeyS1 && s1_toggle)
