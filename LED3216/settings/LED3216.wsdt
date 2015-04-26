@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>LED3216/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>143</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>980</ColumnWidth1><ColumnWidth2>261</ColumnWidth2><ColumnWidth3>65</ColumnWidth3></Build>
+      <Debug-Log>
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1307</ColumnWidth1></Debug-Log>
+    <TerminalIO/><Find-in-Files><ColumnWidth0>470</ColumnWidth0><ColumnWidth1>67</ColumnWidth1><ColumnWidth2>806</ColumnWidth2><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window><Window><Factory>Debug-Log</Factory></Window></Windows></PreferedWindows></Find-in-Files><Breakpoints><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Debug-Log</Factory></Window></Windows></PreferedWindows></Breakpoints></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-1982-25159</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>LED3216</ExpandedNode><ExpandedNode>LED3216/timer.c</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\main.c</Filename><XPos>0</XPos><YPos>787</YPos><SelStart>15565</SelStart><SelEnd>15565</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\clock.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1576</SelStart><SelEnd>1576</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\IAR5.40\430\inc\msp430f5438.h</Filename><XPos>0</XPos><YPos>3767</YPos><SelStart>225560</SelStart><SelEnd>225560</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\DS18B20.c</Filename><XPos>0</XPos><YPos>98</YPos><SelStart>3204</SelStart><SelEnd>3204</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\timer.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>191</SelStart><SelEnd>191</SelEnd></Tab><ActiveTab>4</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\timer.c</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>1618</SelStart><SelEnd>1618</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\DS18B20.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\code\state_machine.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>246</SelStart><SelEnd>246</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-028402e8><key>iaridepm.enu1</key></Toolbar-028402e8></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes/></Row3><Row4><Sizes/></Row4></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>641</Bottom><Right>217</Right><x>-2</x><y>-2</y><xscreen>120</xscreen><yscreen>56</yscreen><sizeHorzCX>87848</sizeHorzCX><sizeHorzCY>81633</sizeHorzCY><sizeVertCX>160322</sizeVertCX><sizeVertCY>937318</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes/></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
